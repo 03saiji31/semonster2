@@ -5,12 +5,14 @@ import java.util.LinkedList;
 
 public class Player {
   String name;// Player name
+  int hp;
   ArrayList<Monster> monsterDeck = new ArrayList<>();
   LinkedList<Integer> randomNumberList;// randomな0~4の数値を必要な数保存しておく
 
   Player(LinkedList<Integer> randomNumberList, String playerName, int hp) {
     this.randomNumberList = randomNumberList;
     this.name = playerName;
+    this.hp =hp;
   }
 
   /**
@@ -29,7 +31,7 @@ public class Player {
     for (Monster m : this.monsterDeck) {
       sb.append(m);
     }
-
+    System.out.println(this.hp);
 
     return sb.toString();
   }
